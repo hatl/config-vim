@@ -545,7 +545,7 @@ set nocompatible
 "set runtimepath=$HOME/.vim,$ETC_VIM,$ETC_VIM/plugins,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$ETC_VIM/after,~/.vim/after
 
 " Use lighter colors on dark backgrounds
-set background=dark
+set background=light
 
 " Syntax highlighting
 if has("syntax")
@@ -628,7 +628,8 @@ set history=1000
 set guitablabel=%N:\ %t\ %M
 
 " allow pasting as-is using X copy buffer
-set mouse=a
+" set mouse=a
+set mouse=r
 
 "===============================================================================
 
@@ -751,6 +752,7 @@ set formatoptions+=l
 
 " Use markers to specify folds
 set foldmethod=marker
+set foldlevel=9999
 
 " Searching {{{1
 "===============================================================================
@@ -1785,7 +1787,9 @@ set tags=./tags;$HOME,tags
 "===============================================================================
 
 " show line numbers relative to current line
-set relativenumber
+" set relativenumber
+set number
+set norelativenumber
 
 "augroup vimrc_relativenumber
 "  autocmd!
@@ -2065,9 +2069,7 @@ if g:use_neocomplete
   " <CR>: close popup and save indent.
   inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
   function! s:my_cr_function()
-    return neocomplete#smart_close_popup() . "\<CR>"
-    " For no inserting <CR> key.
-    "return pumvisible() ? neocomplete#close_popup() : "\<CR>"
+    return pumvisible() ? neocomplete#close_popup() : "\<CR>"
   endfunction
   " <TAB>: completion.
   inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
@@ -2173,7 +2175,7 @@ if !has('gui')
   set t_Co=256
 
   " 256 color version
-  colorscheme fruity256
+  colorscheme kate
 endif
 
 " cursor line
