@@ -2193,4 +2193,6 @@ if filereadable(s:vimlocalconfig)
   exe 'source ' . s:vimlocalconfig
 endif
 
+set nospell
+
 "===============================================================================
