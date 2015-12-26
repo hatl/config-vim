@@ -683,10 +683,10 @@ if has("autocmd")
 endif
 
 " Tab width
-set tabstop=2
+set tabstop=4
 
 " Indentation shift width
-set shiftwidth=2
+set shiftwidth=4
 
 " round indent to multiple of sw using < and >
 set shiftround
