@@ -457,7 +457,7 @@ NeoBundle 'mattn/emmet-vim'
 "-------------------------------------------------------------------------------
 
 " LaTeXSuite
-NeoBundle 'git://git.code.sf.net/p/vim-latex/vim-latex'
+" NeoBundle 'git://git.code.sf.net/p/vim-latex/vim-latex'
 
 "-------------------------------------------------------------------------------
 " Markdown {{{2
