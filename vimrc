@@ -675,7 +675,7 @@ set laststatus=2
 "===============================================================================
 
 " Terminal text width
-set textwidth=80
+set textwidth=800
 
 " Indentation
 if has("autocmd")
